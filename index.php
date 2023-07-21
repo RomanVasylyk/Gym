@@ -3,6 +3,7 @@
 <head>
   <title>Gym Website</title>
   <link rel="stylesheet" href="css/css.css">
+  <link rel="stylesheet" href="css/ex.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -209,6 +210,7 @@
     <div class="chip" onclick="showPage('home-page')">Home</div>
     <div class="chip" onclick="showPage('about-page')">About</div>
     <div class="chip" onclick="showPage('hall-page')">Hall of fame</div>
+    <div class="chip" onclick="showPage('exercises-page')">Exercises</div>
     <div class="chip" onclick="showPage('contact-page')">Contact</div>
   </div>
   
@@ -317,6 +319,45 @@
       <!-- Add more bodybuilder entries here -->
     </section>
   </main>
+    </div>
+
+    <div id="exercises-page">
+
+  <div class="simulator-container">
+    <div class="simulator">
+      <img src="img/noh.jpeg" alt="Simulator 1" onclick="showVideo('img/noh.mp4', 'EXTENSION OF THE LEGS', ['Tip 1: The knee is directed towards the toe.', 'Tip 2: Keep your back in a neutral position.', 'Tip 3: Perform the movement with maximum amplitude.']);">
+      <div class="tips" id="tips1">
+        <h2>Simulator 1 Technique</h2>
+        <ul>
+          <li>Tip 1:  The knee is directed towards the toe.</li>
+          <li>Tip 2: Keep your back in a neutral position.</li>
+          <li>Tip 3: Perform the movement with maximum amplitude.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="simulator">
+      <img src="simulator2.jpg" alt="Simulator 2" onclick="showVideo('video2.mp4', 'Simulator 2 Technique', ['Tip 1: Sed do eiusmod tempor incididunt.', 'Tip 2: Ut labore et dolore magna aliqua.']);">
+      <div class="tips" id="tips2">
+        <h2>Simulator 2 Technique</h2>
+        <ul>
+          <li>Tip 1: Sed do eiusmod tempor incididunt.</li>
+          <li>Tip 2: Ut labore et dolore magna aliqua.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Add more simulators here -->
+  </div>
+
+  <div class="video-modal" id="videoModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <video id="video" controls autoplay>
+    </video>
+    <div class="video-tips" id="videoTips">
+    </div>
+  </div>
+
     </div>
 
     <div id="contact-page">
